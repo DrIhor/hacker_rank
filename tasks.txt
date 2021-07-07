@@ -1,0 +1,10 @@
+30.06.2021: https://www.hackerrank.com/challenges/apple-and-orange/problem
+
+01.07.2021: https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem
+02.07.2021: https://www.hackerrank.com/challenges/array-left-rotation/problem
+03.07.2021: https://www.hackerrank.com/challenges/mini-max-sum/problem
+04.07.2021: https://www.hackerrank.com/challenges/compare-the-triplets/problem
+05.07.2021: https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list-in-reverse/problem
+06.07.2021: https://www.hackerrank.com/challenges/staircase/problem
+07.07.2021: https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem
+08.07.2021: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
