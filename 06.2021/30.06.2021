@@ -1,0 +1,34 @@
+Name: 
+    Apple and Orange
+Link:
+    https://www.hackerrank.com/challenges/apple-and-orange/problem
+Code:
+
+
+/*
+ * Complete the 'countApplesAndOranges' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER s
+ *  2. INTEGER t
+ *  3. INTEGER a
+ *  4. INTEGER b
+ *  5. INTEGER_ARRAY apples
+ *  6. INTEGER_ARRAY oranges
+ */
+
+// work with each slice and tree
+func checkSlice(s, t, treePoint int32, sl []int32){
+    
+    // count for each slice and tree
+    var valuesCounter int32 = 0
+    for _, val := range(sl){
+        point := val + treePoint
+        if (s <= point && point <= t){
+            valuesCounter++
+        }
+    }
+    
+    // print results of counting
+    fmt.Println(valuesCounter)
+}

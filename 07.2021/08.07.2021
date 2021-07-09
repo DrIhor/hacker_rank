@@ -1,0 +1,22 @@
+Name:
+    Cats and a Mouse
+Link:
+    https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
+Code:
+
+// Complete the catAndMouse function below.
+func catAndMouse(x int32, y int32, z int32) string {
+    catA := math.Abs(float64(z - x))
+    catB := math.Abs(float64(z - y))
+    
+    if(catA < catB){
+        return "Cat A"
+    }
+    
+    if(catA > catB){
+        return "Cat B"
+    }
+    
+    return "Mouse C"
+
+}

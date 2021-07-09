@@ -1,0 +1,29 @@
+Name:
+    Mini-Max Sum
+Link:
+    https://www.hackerrank.com/challenges/mini-max-sum/problem
+Code:
+
+/*
+ * Complete the 'miniMaxSum' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+ 
+ func sum(array []int32) int {  
+    var result int
+    for _, v := range array {  
+        result += int(v)  
+    }
+    
+    return result  
+}  
+
+func miniMaxSum(arr []int32) {
+    // Write your code here
+    sort.Slice(arr, func(i, j int) bool {
+        return arr[i] <= arr[j]
+    })
+    
+    fmt.Printf("%v %v", sum(arr[:4]), sum(arr[1:]))    
+}

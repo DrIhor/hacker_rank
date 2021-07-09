@@ -1,0 +1,21 @@
+Name:
+    Left Rotation
+Link:
+    https://www.hackerrank.com/challenges/array-left-rotation/problem
+Code:
+
+/*
+ * Complete the 'rotateLeft' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER d
+ *  2. INTEGER_ARRAY arr
+ */
+
+func rotateLeft(d int32, arr []int32) []int32 {
+    // Write your code here
+    
+    return append(arr[d:],arr[:d]...)
+}
+

@@ -1,0 +1,43 @@
+Name:
+    Reverse a doubly linked list
+Link:
+    https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem
+Code:
+
+/*
+ * Complete the 'reverse' function below.
+ *
+ * The function is expected to return an INTEGER_DOUBLY_LINKED_LIST.
+ * The function accepts INTEGER_DOUBLY_LINKED_LIST llist as parameter.
+ */
+
+/*
+ * For your reference:
+ *
+ * DoublyLinkedListNode {
+ *     data int32
+ *     next *DoublyLinkedListNode
+ *     prev *DoublyLinkedListNode
+ * }
+ *
+ */
+
+func reverse(llist *DoublyLinkedListNode) *DoublyLinkedListNode {
+    // Write your code here
+    var nextInList *DoublyLinkedListNode
+    var head *DoublyLinkedListNode
+    for llist != nil {
+            nextInList = llist.next
+            if nextInList == nil{
+                head = llist
+            }
+            
+            llist.next, llist.prev = llist.prev, llist.next
+            llist = nextInList
+            fmt.Println(llist)
+        }
+        fmt.Println(nextInList)
+
+    
+    return head
+}

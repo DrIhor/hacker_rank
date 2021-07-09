@@ -1,0 +1,24 @@
+Name:
+    Staircase
+Link:
+    https://www.hackerrank.com/challenges/staircase/problem
+Code:
+
+/*
+ * Complete the 'staircase' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+func staircase(n int32) {
+    // Write your code here
+    for i := 1; i <= int(n); i++{
+        for vl := int(n) - i; vl > 0; vl--{
+            fmt.Print(" ")
+        }
+        for sh := i; sh > 0; sh--{
+            fmt.Print("#")
+        }
+        fmt.Println()
+    }
+}
