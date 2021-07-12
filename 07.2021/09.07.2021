@@ -1,0 +1,53 @@
+Name:
+    Grading Students
+Link:
+    https://www.hackerrank.com/challenges/grading/problem
+Code:
+
+// const data from task
+const (
+    roundValue int32 = 5
+    valueDiff int32 = 3
+    examPass int32 = 35
+)
+
+// round to upper value
+func getRoundValue(val int32) int32{
+    return ((val / roundValue) + 1) * roundValue
+}
+
+func modifyValue(val int32) int32{
+    
+    // check if exam is passed
+    if val < examPass {
+        return val
+    }
+    
+    // check with rounded data
+    roundedValue := getRoundValue(val)
+    if roundedValue - val < valueDiff{
+        return roundedValue
+    }
+    
+    // all other results
+    return val
+}
+
+/*
+ * Complete the 'gradingStudents' function below.
+ *
+ * The function is expected to return 
+ 
+ constan INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
+ */
+
+func gradingStudents(grades []int32) []int32 {
+    // Write your code here
+    var result []int32
+    for _, grade := range(grades){
+        result = append(result, (modifyValue(grade)))
+    }
+        
+    return result
+}

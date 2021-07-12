@@ -1,0 +1,49 @@
+Name:
+    Delete a Node
+Link:
+    https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem
+Code:
+
+/*
+ * Complete the 'deleteNode' function below.
+ *
+ * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+ * The function accepts following parameters:
+ *  1. INTEGER_SINGLY_LINKED_LIST llist
+ *  2. INTEGER position
+ */
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     data int32
+ *     next *SinglyLinkedListNode
+ * }
+ *
+ */
+
+func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNode {
+    // Write your code here 
+    
+    // delete if first node
+    if position == 0 {
+        return llist.next
+    }
+    
+    // check other nodes
+    curr := llist
+    for curr != nil {
+        position--
+        if position == 0 {
+            curr.next = curr.next.next
+            break
+        }
+        fmt.Println("data: ", curr.data)
+        fmt.Println("position: ", position)
+
+        curr = curr.next
+    }
+    
+    return llist
+}

@@ -1,0 +1,40 @@
+Name:
+    
+Link:
+    
+Code:
+
+/*
+ * Complete the 'removeDuplicates' function below.
+ *
+ * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+ * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+ */
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     data int32
+ *     next *SinglyLinkedListNode
+ * }
+ *
+ */
+
+func removeDuplicates(llist *SinglyLinkedListNode) *SinglyLinkedListNode {
+    // Write your code here
+    if llist == nil || llist.next == nil{
+        return llist
+    }
+    
+    // remove with subelements
+    // may be better way but :(
+    if llist.data == llist.next.data{
+        llist.next = llist.next.next
+        removeDuplicates(llist)
+    }
+    
+    removeDuplicates(llist.next)
+    
+    return llist
+}
