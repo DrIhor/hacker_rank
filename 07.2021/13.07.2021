@@ -1,0 +1,38 @@
+Name:
+    Breaking the Records
+Link:
+   https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+Code:
+
+/*
+ * Complete the 'breakingRecords' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY scores as parameter.
+ */
+
+func breakingRecords(scores []int32) []int32 {
+    // Write your code here
+    
+    var smCounter, bgCounter int32 = 0, 0 // count each record
+    var smallest, biggest int32 // tmp save each point
+    for i, score := range(scores){
+        // save first values as tmp data
+        if i == 0 {
+            smallest, biggest = score, score
+        }
+        
+        // count each element
+        if score < smallest {
+            smallest = score
+            smCounter++
+        }
+        
+        if score > biggest {
+            biggest = score
+            bgCounter++
+        }
+    }
+    
+    return []int32{bgCounter, smCounter}
+}
