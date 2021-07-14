@@ -1,0 +1,34 @@
+Name:
+    Sales by Match
+Link:
+   https://www.hackerrank.com/challenges/sock-merchant/problem
+Code:
+
+/*
+ * Complete the 'sockMerchant' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER_ARRAY ar
+ */
+
+func sockMerchant(n int32, ar []int32) int32 {
+    // Write your code here
+    var counter int32 = 0
+    
+    sockMatcher := make(map[int32]bool)
+    for _, val := range(ar){
+        if _, ok := sockMatcher[val]; ok {
+            // do something here
+            delete(sockMatcher, val)
+            counter++
+            continue
+        }
+        
+        // save if not match
+        sockMatcher[val] = true
+    }
+    
+    return counter
+}
