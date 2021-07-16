@@ -1,0 +1,64 @@
+Name:
+    Time Conversion 
+Link:
+    https://www.hackerrank.com/challenges/time-conversion/problem
+Code:
+
+const (
+    layout12hours = "03:04:05PM"
+    layout24hours = "15:04:05"
+)
+/*
+ * Complete the 'timeConversion' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+func timeConversion(s string) string {
+    // Write your code here
+    t, _ := time.Parse(layout12hours, s)
+    return t.Format(layout24hours)
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ * Complete the 'timeConversion' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+ 
+func splitTime(s string) (string, string){
+    datePartTextPosition := len(s) - 2
+    return s[:datePartTextPosition], s[datePartTextPosition:]
+}
+
+func changeDate(s, dayPart string) string{
+    hours, _ := strconv.Atoi(s[:2]) // get hours
+    
+    // check spesific dates
+    if hours == 12 {
+        if dayPart == "AM" {
+            return "00" + s[2:]
+        }
+        return s
+    }
+    
+    // other types
+    if dayPart == "PM"{
+            hoursUpdated := strconv.Itoa(hours + 12)
+            return hoursUpdated + s[2:]
+    }
+
+    return s
+}
+
+func timeConversion(s string) string {
+    // Write your code here
+    time, dayPart := splitTime(s)        
+    return changeDate(time, dayPart)
+}
