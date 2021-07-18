@@ -1,0 +1,41 @@
+Name:
+    Bill Division
+Link:
+    https://www.hackerrank.com/challenges/bon-appetit/problem
+Code:
+
+/*
+ * Complete the 'bonAppetit' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY bill
+ *  2. INTEGER k
+ *  3. INTEGER b
+ */
+ 
+ 
+func arrSum(ar []int32) int32{
+    var result int32 = 0
+    for i := range(ar){
+        result += ar[i]
+    }
+    
+    return result
+}
+
+func showResult(am int32) {
+    if am == 0 {
+        fmt.Println("Bon Appetit")
+        return
+    }
+    
+    fmt.Println(am)
+}
+
+func bonAppetit(bill []int32, k int32, b int32) {
+    // Write your code here
+    billCost := arrSum(bill)
+    annaBill := (billCost - bill[k]) / 2
+    
+    showResult(b - annaBill)
+}
