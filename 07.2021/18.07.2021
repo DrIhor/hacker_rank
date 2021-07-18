@@ -1,0 +1,44 @@
+Name:
+    2D Array - DS
+Link:
+    https://www.hackerrank.com/challenges/2d-array/problem?isFullScreen=false
+Code:
+
+/*
+ * Complete the 'hourglassSum' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
+
+func maxValue(a, b int32) int32{
+    if a > b {
+        return a
+    }
+    
+    return b
+}
+
+func hourglassSum(arr [][]int32) int32 {
+    // Write your code here
+    var res int32 // init return data
+    
+    // loop sum check
+    // using 1 value to check square with ar[i][j] in center
+    for i := 1; i < len(arr) - 1; i++{
+        for j := 1; j < len(arr[i]) - 1; j++{
+            temp := arr[i-1][j-1] + arr[i-1][j] + arr[i-1][j+1] +
+                arr[i][j] +
+                + arr[i+1][j-1] + arr[i+1][j] + arr[i+1][j+1];
+
+            // check max sum
+            if i == 1 && j == 1{
+                res = temp // 
+            }else{
+                res = maxValue(res, temp)
+            }
+        }
+    }
+    
+    return res
+}

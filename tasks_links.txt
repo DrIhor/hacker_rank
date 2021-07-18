@@ -17,3 +17,4 @@
 15.07.2021: https://www.hackerrank.com/challenges/counting-valleys/problem
 16.07.2021: https://www.hackerrank.com/challenges/time-conversion/problem
 17.07.2021: https://www.hackerrank.com/challenges/bon-appetit/problem
+18.07.2021: https://www.hackerrank.com/challenges/2d-array/problem?isFullScreen=false
