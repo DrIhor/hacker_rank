@@ -1,0 +1,51 @@
+Name:
+    Between Two Sets
+Link:
+    https://www.hackerrank.com/challenges/between-two-sets/problem
+Code:
+
+
+func checkSets(a []int32, b []int32, valCheck int32) bool {
+
+    for _, val := range(b){
+        if (val % valCheck) != 0 {
+            return false
+        }
+    }
+
+    for _, val := range(a){
+        if (valCheck % val) != 0 {
+            return false
+        }
+    }
+    
+    return true
+}
+
+/*
+ * Complete the 'getTotalX' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER_ARRAY b
+ */
+
+func getTotalX(a []int32, b []int32) int32 {
+    // Write your code here
+   
+    // sort all data
+    // perhaps it would be better to take Min(b) and Max(a) values but...
+    sort.Slice(a, func(i, j int) bool { return a[i] < a[j] })
+    sort.Slice(b, func(i, j int) bool { return b[i] < b[j] })
+    
+    // check results
+    var res int32
+    for i := a[len(a) - 1]; i <= b[0]; i++{
+        if checkSets(a, b, i){
+            res++
+        }
+    }
+
+    return res
+}
