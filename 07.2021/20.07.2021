@@ -1,0 +1,43 @@
+Name:
+    Subarray Division
+Link:
+    https://www.hackerrank.com/challenges/the-birthday-bar/problem
+Code:
+
+
+func checkSum(arr []int32, smCheckVal int32) bool {
+    var sum int32
+    for i := range(arr){
+        sum += arr[i]
+    }
+    
+    if sum != smCheckVal{
+        return false
+    }
+    
+    return true
+}
+
+/*
+ * Complete the 'birthday' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY s
+ *  2. INTEGER d
+ *  3. INTEGER m
+ */
+
+func birthday(s []int32, d int32, m int32) int32 {
+    // Write your code here
+    
+    var resCounter int32
+    for i := 0; i <= len(s) - int(m); i++ {
+        arrSlice := s[i:m + int32(i)]
+        if checkSum(arrSlice, d){
+            resCounter++
+        }
+    }
+    
+    return resCounter
+}
