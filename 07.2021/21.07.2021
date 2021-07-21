@@ -1,0 +1,30 @@
+Name:
+    Utopian Tree
+Link:
+    https://www.hackerrank.com/challenges/utopian-tree/problem
+Code:
+
+func updateValue(step, val int32)  int32 {
+    if step % 2 == 0 {
+        return val + 1
+    }
+        
+    return val * 2
+}
+
+/*
+ * Complete the 'utopianTree' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
+ */
+
+func utopianTree(n int32) int32 {
+    // Write your code here
+    var result int32
+    for i := int32(0); i <= n; i++{
+        result = updateValue(i, result)
+    }
+    
+    return result
+}
