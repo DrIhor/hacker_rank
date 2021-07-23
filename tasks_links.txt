@@ -22,3 +22,4 @@
 20.07.2021: https://www.hackerrank.com/challenges/the-birthday-bar/problem
 21.07.2021: https://www.hackerrank.com/challenges/utopian-tree/problem
 22.07.2021: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+23.07.2021: https://www.hackerrank.com/challenges/drawing-book/problem
