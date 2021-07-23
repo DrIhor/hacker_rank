@@ -1,47 +1,38 @@
 Name:
-    Day of the Programmer
+    Drawing Book
 Link:
-    https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+    https://www.hackerrank.com/challenges/drawing-book/problem
 Code:
 
 
-const (
-    dayNumber int = 256
-    calendarChange int32 = 1918
-)
+// check page from which start and end
+func checkPages(n int32, p int32) (int32, int32) {
+    front := p / 2
+    
+    back := (n - p) / 2
+    if n % 2 == 0 {
+        back = (n + 1 - p) / 2
+    }
+    
+    return front, back
 
-func checkJulianCalendar(year int32) int32{
-    var daysDiff int32 = 1
-    
-    // when date changed
-    if (year == 1918){
-        return -12
-    }
-    
-    // check diff in Julian calendar
-    if (year < calendarChange) {
-        if (year % 400) == 0 || (year % 4) == 0 && (year % 100) == 0 {
-            daysDiff = 2
-        }
-    }
-    
-    return daysDiff
 }
 
 /*
- * Complete the 'dayOfProgrammer' function below.
+ * Complete the 'pageCount' function below.
  *
- * The function is expected to return a STRING.
- * The function accepts INTEGER year as parameter.
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER p
  */
 
-func dayOfProgrammer(year int32) string {
+func pageCount(n int32, p int32) int32 {
     // Write your code here
-    start := time.Date(int(year), 1, 1, 0, 0, 0, 0, time.UTC)
-    
-    daysDiff := checkJulianCalendar(year)
-    
-    // calculate new date
-    newDate := start.AddDate(0, 0, 1 * dayNumber - int(daysDiff))
-    return newDate.Format("02.01.2006")
+    front, back := checkPages(n, p)
+    if front > back {
+        return back
+    }
+
+    return front
 }
