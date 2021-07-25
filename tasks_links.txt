@@ -24,4 +24,4 @@
 22.07.2021: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
 23.07.2021: https://www.hackerrank.com/challenges/drawing-book/problem
 24.07.2021: https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
-25.07.2021: 
+25.07.2021: https://www.hackerrank.com/challenges/migratory-birds/problem
