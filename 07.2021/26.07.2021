@@ -1,0 +1,24 @@
+Name:
+    The Hurdle Race
+Link:
+    https://www.hackerrank.com/challenges/the-hurdle-race/problem
+Code:
+
+func maxArrValue(arr []int32) int32 {
+    var maxValue int32
+    for i := range(arr) {
+        if maxValue < arr[i]{
+            maxValue = arr[i]
+        }
+    }
+    
+    return maxValue
+}
+
+func choosePoisonNumber(jump, hurdleHeight int32) int32{
+    if jump >= hurdleHeight {
+        return 0
+    }
+    
+    return hurdleHeight - jump
+}
