@@ -1,0 +1,41 @@
+Name:
+    Birthday Cake Candles
+Link:
+    https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+Code:
+
+/*
+ * Complete the 'birthdayCakeCandles' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY candles as parameter.
+ */
+ 
+ type candle struct{
+     height int32
+     number int32
+ }
+ 
+func newCandle(hg int32) candle{
+    return candle{
+        height: hg,
+        number: 1,
+    }
+}
+
+func birthdayCakeCandles(candles []int32) int32 {
+    // Write your code here
+    var cd candle
+    for _, candleHeight := range(candles){
+        if cd.height < candleHeight {
+            cd = newCandle(candleHeight)
+            continue
+        }
+        
+        if cd.height == candleHeight {
+            cd.number++
+        }
+    }
+    
+    return cd.number
+}
