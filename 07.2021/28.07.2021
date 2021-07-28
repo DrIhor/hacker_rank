@@ -1,0 +1,43 @@
+Name:
+    Electronics Shop
+Link:
+    https://www.hackerrank.com/challenges/electronics-shop/problem
+Code:
+
+/*
+ * Complete the getMoneySpent function below.
+ */
+func getMoneySpent(keyboards []int32, drives []int32, b int32) int32 {
+    /*
+     * Write your code here.
+     */
+    
+    var bestPrice int32 = -1
+    for _, keyboard := range(keyboards){
+        // skip too cost
+        if keyboard >= b {
+            continue
+        }
+        
+        for _, drive := range(drives){
+            // skip too cost
+            if drive >= b {
+                continue
+            }
+            
+            pair := keyboard + drive
+            fmt.Println(pair)
+            // found best match and why check more
+            if pair == b {
+                return b
+            }
+            
+            // change price if is better
+            if pair > bestPrice && pair < b {
+                bestPrice = pair
+            }
+        }
+    }
+    
+    return bestPrice
+}
