@@ -1,0 +1,34 @@
+Name:
+    Angry Professor
+Link:
+    https://www.hackerrank.com/challenges/angry-professor/problem
+Code:
+
+/*
+ * Complete the 'angryProfessor' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts following parameters:
+ *  1. INTEGER k
+ *  2. INTEGER_ARRAY a
+ */
+ 
+ func cslLecture(lecture bool) string{
+     if lecture {
+         return "NO"
+     }
+     
+     return "YES"
+ }
+
+func angryProfessor(k int32, a []int32) string {
+    // Write your code here
+    var countStudents int32
+    for i := range(a){
+        if a[i] <= 0 {
+            countStudents++
+        }
+    }
+    
+    return cslLecture(countStudents>=k)
+}
