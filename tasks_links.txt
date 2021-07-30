@@ -29,3 +29,4 @@
 27.07.2021: https://www.hackerrank.com/challenges/birthday-cake-candles/problem
 28.07.2021: https://www.hackerrank.com/challenges/electronics-shop/problem
 29.07.2021: https://www.hackerrank.com/challenges/angry-professor/problem
+30.07.2021: https://www.hackerrank.com/challenges/find-digits/problem

@@ -1,0 +1,30 @@
+Name:
+    Find Digits
+Link:
+    https://www.hackerrank.com/challenges/find-digits/problem
+Code:
+
+/*
+ * Complete the 'findDigits' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
+ */
+
+func findDigits(n int32) int32 {
+    // Write your code here
+    var counter int32
+    for tmp := n;n > 0; {
+        lastVal := (n % 10)
+        if lastVal != 0 {
+            if tmp > 0 && tmp % lastVal == 0 {
+                counter ++
+            }
+        }
+        
+                
+        n /= 10
+    }
+    
+    return counter
+}
