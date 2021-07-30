@@ -17,7 +17,7 @@ func findDigits(n int32) int32 {
     for tmp := n;n > 0; {
         lastVal := (n % 10)
         if lastVal != 0 {
-            if tmp > 0 && tmp % lastVal == 0 {
+            if tmp % lastVal == 0 {
                 counter ++
             }
         }
