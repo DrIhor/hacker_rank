@@ -1,0 +1,37 @@
+Name:
+    Picking Numbers
+Link:
+    https://www.hackerrank.com/challenges/picking-numbers/problem
+Code:
+
+const maxDiff int32 = 1
+
+/*
+ * Complete the 'pickingNumbers' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY a as parameter.
+ */
+
+func pickingNumbers(a []int32) int32 {
+    // Write your code here
+    
+    sort.Slice(a, func(i, j int) bool { return a[i] < a[j] })
+    
+    var maxCounter, counter int32
+    for i := 0; i < len(a) - 1; i++{
+        for j := i; j < len(a); j++{
+            if a[j] - a[i] <= maxDiff {
+                counter++
+            }
+        }
+        
+        if maxCounter < counter{
+            maxCounter = counter
+        }
+        counter = 0
+    }
+    
+    return maxCounter
+}
+

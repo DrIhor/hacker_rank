@@ -30,3 +30,5 @@
 28.07.2021: https://www.hackerrank.com/challenges/electronics-shop/problem
 29.07.2021: https://www.hackerrank.com/challenges/angry-professor/problem
 30.07.2021: https://www.hackerrank.com/challenges/find-digits/problem
+31.07.2021: https://www.hackerrank.com/challenges/picking-numbers/problem
+
