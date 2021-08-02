@@ -1,0 +1,49 @@
+Name: 
+    Beautiful Days at the Movies
+Link:
+    https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+Code:
+
+
+func reverseValue(val int32) int32{
+    strNumber := strconv.Itoa(int(val))  
+    
+    reverseStrNumber := ""  
+    for length := len(strNumber); length > 0; length-- {  
+        reverseStrNumber += string(strNumber[length-1])  
+    }  
+    reverseNum, _ := strconv.Atoi(reverseStrNumber)  
+    
+    return int32(reverseNum)
+}
+
+func abs(val int32)int32{
+    if val < 0 {
+        return -val
+    }
+    
+    return val
+}
+
+/*
+ * Complete the 'beautifulDays' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER i
+ *  2. INTEGER j
+ *  3. INTEGER k
+ */
+
+func beautifulDays(i int32, j int32, k int32) int32 {
+    // Write your code here
+    var counter int32
+    for ; i <= j; i++ {
+         revValue := reverseValue(i)
+         if abs(i-revValue) % k == 0{
+             counter++
+         }
+    }
+    
+    return counter
+}
