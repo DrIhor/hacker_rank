@@ -1,0 +1,29 @@
+Name: 
+    Viral Advertising
+Link:
+    https://www.hackerrank.com/challenges/strange-advertising/problem
+Code:
+
+
+/*
+ * Complete the 'viralAdvertising' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
+ */
+
+func viralAdvertising(n int32) int32 {
+    // Write your code here
+    
+    var peoplesSendAdv int32 = 5
+    var likesCumulative int32
+    for i := int32(0); i < n ; i++{
+        likes := peoplesSendAdv / 2
+        
+        // recount all values
+        peoplesSendAdv = likes * 3
+        likesCumulative += likes
+    }
+    
+    return likesCumulative
+}

@@ -33,3 +33,4 @@
 31.07.2021: https://www.hackerrank.com/challenges/picking-numbers/problem
 
 01.08.2021: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+02.08.2021: https://www.hackerrank.com/challenges/strange-advertising/problem
