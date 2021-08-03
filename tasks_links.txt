@@ -34,3 +34,4 @@
 
 01.08.2021: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
 02.08.2021: https://www.hackerrank.com/challenges/strange-advertising/problem
+03.08.2021: https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem
