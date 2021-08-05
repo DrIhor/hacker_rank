@@ -1,0 +1,31 @@
+Name: 
+    Priyanka and Toys
+Link:
+    https://www.hackerrank.com/challenges/priyanka-and-toys/problem
+Code:
+
+/*
+ * Complete the 'toys' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY w as parameter.
+ */
+
+func toys(w []int32) int32 {
+    // Write your code here
+    sort.Slice(w, func(i, j int) bool{return w[i] < w[j]})
+    
+    var count, prevValue int32
+    for i, val := range(w){
+        if i == 0 {
+            prevValue = val
+            count++
+        }
+        
+        if prevValue + 4 < val{
+            count++
+            prevValue = val
+        }
+    }
+    return count
+}
