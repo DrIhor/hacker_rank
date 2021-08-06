@@ -37,3 +37,4 @@
 03.08.2021: https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem
 04.08.2021: https://www.hackerrank.com/challenges/tower-breakers-1/problem
 05.08.2021: https://www.hackerrank.com/challenges/priyanka-and-toys/problem
+06.08.2021: https://www.hackerrank.com/challenges/cut-the-sticks/problem
