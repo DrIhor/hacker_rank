@@ -1,0 +1,47 @@
+Name: 
+    Library Fine
+Link:
+    https://www.hackerrank.com/challenges/library-fine/problem
+Code:
+
+/*
+ * Complete the 'libraryFine' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER d1
+ *  2. INTEGER m1
+ *  3. INTEGER y1
+ *  4. INTEGER d2
+ *  5. INTEGER m2
+ *  6. INTEGER y2
+ */
+ 
+ func createNewDate(day, month, year int32) time.Time {
+     return time.Date(int(year), time.Month(month), int(day), 0, 0, 0, 0, time.UTC)
+ }
+ 
+func calculateFine(d1 int32, m1 int32, y1 int32, d2 int32, m2 int32, y2 int32) int32 {
+    if y1 != y2 {
+        return 10000
+    }
+    
+    if m1 != m2{
+        return 500 * (m1 - m2)
+    }
+    
+    return 15 * (d1 - d2)
+}
+ 
+
+func libraryFine(d1 int32, m1 int32, y1 int32, d2 int32, m2 int32, y2 int32) int32 {
+    // Write your code here
+    returnBook := createNewDate(d1, m1, y1)
+    bookDeadline :=  createNewDate(d2, m2, y2)
+    
+    if returnBook.After(bookDeadline){
+        return calculateFine(d1, m1, y1, d2, m2, y2)
+    }
+    
+    return 0
+}
