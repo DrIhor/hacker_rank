@@ -1,0 +1,32 @@
+Name: 
+    Sherlock and Squares
+Link:
+    https://www.hackerrank.com/challenges/sherlock-and-squares/problem
+Code:
+
+/*
+ * Complete the 'squares' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER a
+ *  2. INTEGER b
+ */
+
+func squares(a int32, b int32) int32 {
+    // Write your code here
+    
+    startCount := math.Ceil(math.Sqrt(float64(a)))
+    var result int32
+    for i := int32(startCount); ; i++{
+        if i * i > b{
+            break
+        }
+        
+        if i * i <= b {
+            result++
+        }   
+    }
+    
+    return result
+}
