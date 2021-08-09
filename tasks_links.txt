@@ -39,3 +39,4 @@
 05.08.2021: https://www.hackerrank.com/challenges/priyanka-and-toys/problem
 06.08.2021: https://www.hackerrank.com/challenges/cut-the-sticks/problem
 07.08.2021: https://www.hackerrank.com/challenges/library-fine/problem
+08.08.2021: https://www.hackerrank.com/challenges/circular-array-rotation/problem
