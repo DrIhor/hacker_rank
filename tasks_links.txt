@@ -42,3 +42,4 @@
 08.08.2021: https://www.hackerrank.com/challenges/circular-array-rotation/problem
 09.08.2021: https://www.hackerrank.com/challenges/sherlock-and-squares/problem
 10.08.2021: https://www.hackerrank.com/challenges/taum-and-bday/problem
+11.08.2021: https://www.hackerrank.com/challenges/repeated-string/problem

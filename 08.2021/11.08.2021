@@ -1,0 +1,38 @@
+Name: 
+    Repeated String
+Link:
+    https://www.hackerrank.com/challenges/repeated-string/problem
+Code:
+
+/*
+ * Complete the 'repeatedString' function below.
+ *
+ * The function is expected to return a LONG_INTEGER.
+ * The function accepts following parameters:
+ *  1. STRING s
+ *  2. LONG_INTEGER n
+ */
+ 
+ func checkRepeatOfA(s string) int64{
+     var counter int64
+     for _, letter := range(s){
+         if letter == 'a'{
+             counter++
+         }
+     }
+     
+     return counter
+ }
+
+func repeatedString(s string, n int64) int64 {
+    // Write your code here
+    repeats := n / int64(len(s))
+    repeatsOfLetter := repeats * checkRepeatOfA(s)
+
+    for i := int64(0); i < (n % int64(len(s))); i++{
+        if s[i] == 'a'{
+            repeatsOfLetter++
+         }
+    }
+    return repeatsOfLetter
+}
