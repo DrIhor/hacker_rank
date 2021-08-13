@@ -1,0 +1,36 @@
+Name: 
+    Lisa's Workbook
+Link:
+    https://www.hackerrank.com/challenges/lisa-workbook/problem
+Code:
+
+/*
+ * Complete the 'workbook' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY arr
+ */
+
+func workbook(n int32, k int32, arr []int32) int32 {
+    // Write your code here
+    
+    var specialProblems int32
+    var page int32 = 1
+    
+    for _, problemsInChapter := range(arr){
+        for problem := int32(1); problem <= problemsInChapter; problem++{
+            if problem == page{
+                specialProblems++
+            }
+            
+            if problem % k == 0 || problem == problemsInChapter{
+                page++
+            }
+        }
+    }
+    
+    return specialProblems
+}

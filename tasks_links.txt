@@ -44,3 +44,4 @@
 10.08.2021: https://www.hackerrank.com/challenges/taum-and-bday/problem
 11.08.2021: https://www.hackerrank.com/challenges/repeated-string/problem
 12.08.2021: https://www.hackerrank.com/challenges/minimum-distances/problem
+13.08.2021: https://www.hackerrank.com/challenges/lisa-workbook/problem
