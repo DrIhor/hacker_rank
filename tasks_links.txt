@@ -47,3 +47,4 @@
 13.08.2021: https://www.hackerrank.com/challenges/lisa-workbook/problem
 14.08.2021: https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
 15.08.2021: https://www.hackerrank.com/challenges/equality-in-a-array/problem
+16.08.2021: https://www.hackerrank.com/challenges/beautiful-triplets/problem
