@@ -49,3 +49,4 @@
 15.08.2021: https://www.hackerrank.com/challenges/equality-in-a-array/problem
 16.08.2021: https://www.hackerrank.com/challenges/beautiful-triplets/problem
 17.08:2021: https://www.hackerrank.com/challenges/reduced-string/problem
+18.08.2021: https://www.hackerrank.com/challenges/cavity-map/problem
