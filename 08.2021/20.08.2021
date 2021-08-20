@@ -1,0 +1,23 @@
+Name: 
+    CamelCase
+Link:
+    https://www.hackerrank.com/challenges/camelcase/problem
+Code:
+
+/*
+ * Complete the 'camelcase' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+func camelcase(s string) int32 {
+    // Write your code here
+    var counter int32 = 1
+    for i := range(s){
+        if s[i] >= 65 && s[i] <= 90{
+            counter++
+        }
+    }
+    return counter
+}

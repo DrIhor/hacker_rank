@@ -51,3 +51,4 @@
 17.08:2021: https://www.hackerrank.com/challenges/reduced-string/problem
 18.08.2021: https://www.hackerrank.com/challenges/cavity-map/problem
 19.08.2021: https://www.hackerrank.com/challenges/fair-rations/problem
+20.08.2021: https://www.hackerrank.com/challenges/camelcase/problem
