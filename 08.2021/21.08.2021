@@ -1,0 +1,32 @@
+Name: 
+    Manasa and Stones
+Link:
+    https://www.hackerrank.com/challenges/manasa-and-stones/problem
+Code:
+
+/*
+ * Complete the 'stones' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER a
+ *  3. INTEGER b
+ */
+
+func stones(n int32, a int32, b int32) []int32 {
+    // Write your code here
+    var values []int32
+    valuesList := make(map[int32]bool)
+    for i := int32(0); i < n; i++{
+        val := a*i+b*(n-i-1)
+        if _, ok := valuesList[val]; !ok{
+            valuesList[val] = true
+            values = append(values, val)
+        }
+    }
+    
+    sort.Slice(values, func(i, j int) bool { return values[i] < values[j]})
+    
+    return values
+}
