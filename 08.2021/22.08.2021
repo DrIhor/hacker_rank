@@ -1,0 +1,36 @@
+Name: 
+    Halloween Sale
+Link:
+    https://www.hackerrank.com/challenges/halloween-sale/problem
+Code:
+
+/*
+ * Complete the 'howManyGames' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER p
+ *  2. INTEGER d
+ *  3. INTEGER m
+ *  4. INTEGER s
+ */
+ 
+func getNewPrice(pr, m int32) int32{
+    if m >= pr{
+        return m
+    }
+    
+    return pr
+}
+
+func howManyGames(p int32, d int32, m int32, s int32) int32 {
+    // Return the number of games you can buy
+    var counter int32
+    for ; s >= p ; {
+        counter++
+        s -= p
+        p = getNewPrice(p-d, m)
+    }
+    
+    return counter
+}
