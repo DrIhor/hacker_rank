@@ -54,3 +54,4 @@
 20.08.2021: https://www.hackerrank.com/challenges/camelcase/problem
 21.08.2021: https://www.hackerrank.com/challenges/manasa-and-stones/problem
 22.08.2021: https://www.hackerrank.com/challenges/halloween-sale/problem
+23.08.2021: https://www.hackerrank.com/challenges/acm-icpc-team/problem

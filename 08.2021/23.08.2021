@@ -1,0 +1,51 @@
+Name: 
+    ACM ICPC Team
+Link:
+    https://www.hackerrank.com/challenges/acm-icpc-team/problem
+Code:
+
+/*
+ * Complete the 'acmTeam' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts STRING_ARRAY topic as parameter.
+ */
+ 
+ func checkTopics(s1, s2 string) int32{
+     var topicsCounter int32
+     for i := 0; i < len(s1); i++{
+         if s1[i] == '1' || s2[i] == '1'{
+             topicsCounter++
+         }
+     }
+     
+     return topicsCounter
+ }
+
+func acmTeam(topic []string) []int32 {
+    // Write your code here
+    
+    var maxTopics int32
+    var teamsCounter int32    
+    // check each team
+    for firstTeam := 0; firstTeam < len(topic) - 1; firstTeam++{
+        for secondTeam := firstTeam + 1; secondTeam < len(topic); secondTeam++{
+            // check text
+            topics := checkTopics(topic[firstTeam], topic[secondTeam])
+            if topics > maxTopics{
+                maxTopics = topics
+                teamsCounter = 1
+                continue
+            }
+            
+            if topics == maxTopics{
+                teamsCounter++
+            }
+        }
+    }
+    
+    return []int32{
+        maxTopics,
+        teamsCounter,
+    }
+}
