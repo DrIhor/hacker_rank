@@ -1,0 +1,25 @@
+Name: 
+    Mars Exploration
+Link:
+    https://www.hackerrank.com/challenges/mars-exploration/problem
+Code:
+
+/*
+ * Complete the 'marsExploration' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+ 
+const message string = "SOS"
+
+func marsExploration(s string) int32 {
+    // Write your code here
+    var changedLetter int32
+    for i := range(s){
+        if s[i] != message[i % len(message)]{
+            changedLetter++
+        }
+    }    
+    return changedLetter
+}
