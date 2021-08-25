@@ -1,0 +1,36 @@
+Name: 
+    HackerRank in a String!
+Link:
+    https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
+Code:
+
+/*
+ * Complete the 'hackerrankInString' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+ const checkStr string = "hackerrank"
+
+func hackerrankInString(s string) string {
+    // Write your code here
+    
+    // get all substrings
+    var checkStrIndex int
+    for _, char := range(s){
+        if checkStrIndex >= len(checkStr){
+            break
+        }
+        
+        if rune(checkStr[checkStrIndex]) == char{
+            checkStrIndex++
+        }
+    }
+    
+    // check result
+    if len(checkStr) == checkStrIndex{
+        return "YES"
+    }
+    
+    return "NO"
+}
