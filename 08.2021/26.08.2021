@@ -1,0 +1,30 @@
+Name: 
+    The Love-Letter Mystery
+Link:
+    https://www.hackerrank.com/challenges/the-love-letter-mystery/problem
+Code:
+
+/*
+ * Complete the 'theLoveLetterMystery' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+ 
+ func abs(val int32) int32{
+     if val < 0 {
+         return -val
+     }
+     return val
+ }
+
+func theLoveLetterMystery(s string) int32 {
+    // Write your code here
+    var count int32
+    for i := 0; i < len(s) / 2; i++{
+        diff := rune(s[i]) - rune(s[len(s)- 1 - i])
+        count += abs(diff) 
+    }
+    
+    return count
+}

@@ -57,3 +57,4 @@
 23.08.2021: https://www.hackerrank.com/challenges/acm-icpc-team/problem
 24.08.2021: https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
 25.08.2021: https://www.hackerrank.com/challenges/mars-exploration/problem
+26.08.2021: https://www.hackerrank.com/challenges/the-love-letter-mystery/problem
