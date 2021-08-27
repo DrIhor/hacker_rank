@@ -1,0 +1,43 @@
+Name: 
+    Funny String
+Link:
+    https://www.hackerrank.com/challenges/funny-string/problem
+Code:
+
+/*
+ * Complete the 'funnyString' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+ 
+ func answer(funny bool) string{
+    if funny {
+        return "Funny"
+    }
+    
+    return "Not Funny"
+}
+
+ 
+ func abs(val int) int{
+     if val < 0{
+         return -val
+     }
+     
+     return val
+ }
+
+func funnyString(s string) string {
+    // Write your code here
+    var funny bool = true
+    for i := 0; i < len(s) - 1; i++{
+        if abs(int(rune(s[i])) - int(rune(s[i+1]))) != 
+        abs(int(rune(s[len(s)-2-i])) - int(rune(s[len(s)-1-i]))){
+            funny = false
+            break
+        } 
+    }
+    
+    return answer(funny)
+}
