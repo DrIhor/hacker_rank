@@ -1,0 +1,36 @@
+Name: 
+    Pangrams
+Link:
+    https://www.hackerrank.com/challenges/pangrams/problem
+Code:
+
+/*
+ * Complete the 'pangrams' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+ 
+ func answer(lettersNumber int) string{
+     if lettersNumber == 26 {
+         return "pangram"
+     }
+     
+     return "not pangram"
+ }
+
+func pangrams(s string) string {
+    // Write your code here
+    lc := strings.ToLower(s)
+    charList := make(map[rune]bool)
+    for _, val := range(lc){
+        // if upper case change to lower
+        if val >= 97 && val <= 122 {
+            if _, ok := charList[val]; !ok {
+                charList[val] = true
+            }
+        }
+    }
+    
+    return answer(len(charList))
+}
