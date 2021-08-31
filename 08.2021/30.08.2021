@@ -1,0 +1,27 @@
+Name: 
+    String Construction
+Link:
+    https://www.hackerrank.com/challenges/string-construction/problem
+Code:
+
+/*
+ * Complete the 'stringConstruction' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+func stringConstruction(s string) int32 {
+    // Write your code here
+    
+    uniqueChars := make(map[rune]bool)
+    for _, ch := range(s){
+        if _, ok := uniqueChars[ch]; ok {
+            continue
+        }
+        
+        uniqueChars[ch] = true
+    }
+    
+    return int32(len(uniqueChars))
+}
