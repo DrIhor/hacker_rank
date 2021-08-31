@@ -1,0 +1,39 @@
+Name: 
+    Gemstones
+Link:
+    https://www.hackerrank.com/challenges/gem-stones/problem
+Code:
+
+/*
+ * Complete the 'gemstones' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING_ARRAY arr as parameter.
+ */
+ 
+
+func gemstones(arr []string) int32 {
+    // Write your code here
+    chars := make(map[rune]int32)
+    for i, word := range(arr){
+        for _, ch := range(word){
+            if i == 0 {
+                chars[ch]++
+                continue
+            }
+            
+            if val, ok := chars[ch]; ok && val == int32(i) {
+                chars[ch]++
+            }
+        }
+    }
+    
+    var counter int32
+    for _, val := range(chars){
+        if val == int32(len(arr)) {
+            counter++
+        }
+    }
+    
+    return counter
+}

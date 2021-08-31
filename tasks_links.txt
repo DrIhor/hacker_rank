@@ -60,3 +60,4 @@
 26.08.2021: https://www.hackerrank.com/challenges/the-love-letter-mystery/problem
 27.08.2021: https://www.hackerrank.com/challenges/funny-string/problem
 28.08.2021: https://www.hackerrank.com/challenges/pangrams/problem
+31.08.2021: https://www.hackerrank.com/challenges/gem-stones/problem
