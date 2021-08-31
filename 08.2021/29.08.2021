@@ -1,0 +1,28 @@
+Name: 
+    Alternating Characters
+Link:
+    https://www.hackerrank.com/challenges/alternating-characters/problem
+Code:
+
+*
+ * Complete the 'alternatingCharacters' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+func alternatingCharacters(s string) int32 {
+    // Write your code here
+    var counter int32
+    
+    var lastChar byte = s[0]
+    for i := 0; i < len(s) - 1; i++{
+        if lastChar == s[i+1]{
+            counter++
+            continue
+        }
+        
+        lastChar = s[i+1]
+    }
+    return counter
+}
