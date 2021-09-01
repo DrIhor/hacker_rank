@@ -1,0 +1,43 @@
+Name: 
+    Making Anagrams
+Link:
+    https://www.hackerrank.com/challenges/making-anagrams/problem
+Code:
+
+
+/*
+ * Complete the 'makingAnagrams' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. STRING s1
+ *  2. STRING s2
+ */
+ 
+func replaceAtIndex(in string, r rune, i int) string {
+    out := []rune(in)
+    out[i] = r
+    return string(out)
+} 
+ 
+
+func makingAnagrams(s1 string, s2 string) int32 {
+    // Write your code here
+    // s1CharMap := createMapFromStr(s1)
+    // s2CharMap := createMapFromStr(s2)
+    repeats := 0
+    
+    for i := 0; i < len(s1); i++{
+        for j := 0; j < len(s2); j++{
+            if s1[i] == s2[j]{
+                repeats++
+                s2 = replaceAtIndex(s2, rune(' '), j)
+                break
+            }
+        }
+    }
+    s1ToChange := len(s1) - repeats
+    s2ToChange := len(s2) - repeats
+
+    return int32(s1ToChange + s2ToChange)
+}
