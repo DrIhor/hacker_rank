@@ -1,0 +1,45 @@
+Name: 
+    Game of Thrones - I
+Link:
+    https://www.hackerrank.com/challenges/game-of-thrones/problem
+Code:
+
+/*
+ * Complete the 'gameOfThrones' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+func answer(countUnpairCharts int32) string{
+    if countUnpairCharts <= 1 {
+        return "YES"
+    }
+    
+    return "NO"
+}
+
+func gameOfThrones(s string) string {
+    // Write your code here
+    charMap := make(map[rune]int32)
+    
+    var countUnpairCharts int32
+    for _, ch := range(s){
+        if val, ok := charMap[ch]; ok {
+            if val % 2 == 0  {
+                charMap[ch]++
+                countUnpairCharts++
+                continue
+            }
+            
+            charMap[ch]++
+            countUnpairCharts--
+            continue
+        }
+        
+        charMap[ch]++
+        countUnpairCharts++
+    }
+    
+    return answer(countUnpairCharts)
+}
