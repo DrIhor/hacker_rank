@@ -1,0 +1,22 @@
+Name: 
+    Find the Median
+Link:
+    https://www.hackerrank.com/challenges/find-the-median/problem
+Code:
+
+/*
+ * Complete the 'findMedian' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+func findMedian(arr []int32) int32 {
+    // Write your code here
+    sort.SliceStable(arr, func(i, j int) bool {
+        return arr[i] < arr[j]
+    })
+    
+    return arr[len(arr)/2]
+
+}

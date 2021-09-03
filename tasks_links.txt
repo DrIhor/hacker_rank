@@ -66,3 +66,4 @@
 
 01.08.2021: https://www.hackerrank.com/challenges/making-anagrams/problem
 02.08.2021: https://www.hackerrank.com/challenges/game-of-thrones/problem
+03.08.2021: https://www.hackerrank.com/challenges/find-the-median/problem
