@@ -64,6 +64,7 @@
 30.08.2021: https://www.hackerrank.com/challenges/string-construction/problem
 31.08.2021: https://www.hackerrank.com/challenges/gem-stones/problem
 
-01.08.2021: https://www.hackerrank.com/challenges/making-anagrams/problem
-02.08.2021: https://www.hackerrank.com/challenges/game-of-thrones/problem
-03.08.2021: https://www.hackerrank.com/challenges/find-the-median/problem
+01.09.2021: https://www.hackerrank.com/challenges/making-anagrams/problem
+02.09.2021: https://www.hackerrank.com/challenges/game-of-thrones/problem
+03.09.2021: https://www.hackerrank.com/challenges/find-the-median/problem
+04.09.2021: https://www.hackerrank.com/challenges/insertionsort1/problem
