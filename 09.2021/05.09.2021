@@ -1,0 +1,25 @@
+Name: 
+    Insertion Sort - Part 2
+Link:
+    https://www.hackerrank.com/challenges/insertionsort2/problem
+Code:
+
+/*
+ * Complete the 'insertionSort2' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER_ARRAY arr
+ */
+ 
+ func insertionSort2(n int32, arr []int32) {
+    // Write your code here
+    for i := 1; i < len(arr); i++ {
+        for j := i; j > 0 ; j--{
+            if arr[j-1] > arr[j] {
+                arr[j-1], arr[j] = arr[j], arr[j-1]
+            }
+        }
+        fmt.Println(strings.Trim(fmt.Sprint(arr), "[]"))
+    }
+}

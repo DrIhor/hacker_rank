@@ -68,3 +68,4 @@
 02.09.2021: https://www.hackerrank.com/challenges/game-of-thrones/problem
 03.09.2021: https://www.hackerrank.com/challenges/find-the-median/problem
 04.09.2021: https://www.hackerrank.com/challenges/insertionsort1/problem
+05.09.2021: https://www.hackerrank.com/challenges/insertionsort2/problem
