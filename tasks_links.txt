@@ -70,3 +70,4 @@
 04.09.2021: https://www.hackerrank.com/challenges/insertionsort1/problem
 05.09.2021: https://www.hackerrank.com/challenges/insertionsort2/problem
 06.09.2021: https://www.hackerrank.com/challenges/quicksort1/problem
+07.09.2021: https://www.hackerrank.com/challenges/countingsort1/problem
