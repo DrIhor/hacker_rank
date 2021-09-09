@@ -1,0 +1,46 @@
+Name: 
+    Missing Numbers
+Link:
+    https://www.hackerrank.com/challenges/countingsort2/problem
+Code:
+
+/*
+ * Complete the 'missingNumbers' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY arr
+ *  2. INTEGER_ARRAY brr
+ */
+
+func missingNumbers(arr []int32, brr []int32) []int32 {
+    // Write your code here
+    var res []int32
+    data := make(map[int32]int32)
+    
+    for i := range(brr){
+        data[brr[i]]++
+    }
+    
+    for j := range(arr){
+        if _, ok := data[arr[j]]; ok{
+            if data[arr[j]]-1 <= 0{
+                delete(data, arr[j])
+            }else{
+                data[arr[j]]--
+            }
+        }
+    }
+    
+    fmt.Println(data)
+    
+    for key := range(data){
+        res = append(res, key)
+    }
+    
+    sort.SliceStable(res, func(i, j int) bool {
+        return res[i] < res[j]
+    })
+    
+    return res
+}
